@@ -92,6 +92,8 @@ nav {
   justify-content: space-around;
   flex: 1 1 20rem;
 }
+
+/* Hero section */
 .hero {
   display: flex;
   min-height: 90vh;
@@ -107,6 +109,7 @@ nav {
 }
 .hero-introduction p {
   padding: 5rem 10rem;
+  color: var(--gray-text);
 }
 .hero-introduction h2 {
   padding-top: 2rem;
@@ -176,9 +179,60 @@ nav {
   display: none;
 }
 
+/* ABOUT Section */
+
+.about {
+  min-height: 100vh;
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+.about-text {
+  color: white;
+  background: var(--background-color);
+  flex: 2 1 40rem;
+  justify-content: space-around;
+  padding: 2rem 6rem;
+  /* max-height: 100vh; */
+}
+.about-image {
+  position: relative;
+  flex: 1 1 40rem;
+}
+.about-image h5 {
+  position: absolute;
+  letter-spacing: 2rem;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, -20%);
+}
+.about-image img {
+  height: 100%;
+  width: 100%;
+  /* max-height: 100vh; */
+  object-fit: cover;
+}
+/* .about-text div {
+  padding: 3rem 8rem;
+} */
+.about-text h3 {
+  padding: 2rem 0rem;
+  font-family: "Ruhl Medium";
+}
+.about-text h2 {
+  font-family: "Vibes";
+  /* padding: 4rem; */
+}
+
 /* MEDIA */
 
 @media screen and (max-width: 842px) {
+  .hero-introduction p {
+    padding: 5rem 3rem;
+  }
+  .hero {
+    width: 100%;
+  }
   .burger {
     position: relative;
     display: block;
@@ -233,5 +287,11 @@ nav {
   }
   .menu-check:checked ~ .burger span:nth-child(3) {
     transform: rotateZ(-45deg) translateY(-300%);
+  }
+  .about-text div {
+    padding: 2rem 3rem;
+  }
+  .about-text h2 {
+    padding-top: 3rem;
   }
 }
